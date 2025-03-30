@@ -1,0 +1,90 @@
+.nav {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.separator {
+  border-width: 0px 1px 0px 0px;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-style: solid;
+  height: 1.5rem;
+  margin-top: 2px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  height: 100%;
+  letter-spacing: 0.5px;
+}
+
+.nav a:hover {
+  color: var(--color-spring-bud);
+  transform: translateY(-1px);
+}
+
+.nav a.active {
+  color: var(--color-spring-bud);
+  font-weight: 500;
+  border-bottom: 2px solid var(--color-spring-bud);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.3rem 0.5rem;
+  }
+  
+  .nav a {
+    font-size: 0.9rem;
+  }
+  
+  .nav ul {
+    gap: 1rem;
+  }
+  
+  .nav li {
+    height: 30px;
+    gap: 1rem;
+  }
+  
+  .separator {
+    height: 1rem;
+    margin-top: 2px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .nav a {
+    font-size: 1rem;
+  }
+  
+  .nav li {
+    height: 35px;
+  }
+  
+  .separator {
+    height: 1.2rem;
+  }
+}

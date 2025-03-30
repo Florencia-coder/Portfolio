@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+
+.subTitle {
+  font-size: 3rem;
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  padding-bottom: 12px;
+}
+
+.description {
+  border: 1px solid white;
+  border-width: 0px 0px 0px 1px;
+  padding-left: 20px;
+  width: 500px;
+  color: var(--color-grey);
+  font-size: 2rem;
+}
+@media (max-width: 480px) {
+  .subTitle {
+    font-size: 1.4rem;
+  }
+  .description {
+    font-size: 1.2rem;
+    width: auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .subTitle {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1.8rem;
+    width: auto;
+  }
+}

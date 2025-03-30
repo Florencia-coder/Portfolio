@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  padding-top: 50px;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+.left,
+.rigth {
+  flex: 1;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.title {
+  text-shadow: 0 0 5px rgba(14, 192, 237, 0.6), 0 0 10px rgba(14, 200, 237, 0.4),
+    0 0 15px rgba(14, 207, 237, 0.2);
+  font-weight: 500;
+  font-family: "Big Shoulders Stencil", sans-serif;
+  display: flex;
+  font-size: clamp(2.8rem, 5vw, 7rem);
+  text-align: right;
+}
+
+.titleRol {
+  margin-left: 30px;
+  color: var(--color-sky-blue);
+  font-weight: 900;
+}
+
+.img {
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.typingEffect {
+  margin-top: 4%;
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace; /* Fuente tipo máquina de escribir */
+  white-space: nowrap; /* Para evitar que se rompa la línea */
+  overflow: hidden; /* Oculta el texto mientras se escribe */
+  border-right: 0.1em solid var(--color-red); /* Cursor de la máquina de escribir */
+  display: inline-block; /* Hace que no se expanda el contenedor */
+  animation: typing 8s steps(60) 1s forwards,
+    blink-caret 0.75s step-end infinite; /* Ajustado para hacer que se vea lento */
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Comienza con el texto oculto */
+  }
+  to {
+    width: 46ch; /* Se expande al 100% de su contenido */
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent; /* Hace que el cursor parpadee */
+  }
+}
+
+.rigth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .container {
+    background: url("ilustracion.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .titleRol {
+    margin-left: 1rem;
+  }
+  .rigth {
+    display: none;
+  }
+  .typingEffect {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    background: url("ilustracion.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .title {
+    font-size: 5rem;
+  }
+  .titleRol {
+    margin-left: 2rem;
+  }
+  .rigth {
+    display: none;
+  }
+}

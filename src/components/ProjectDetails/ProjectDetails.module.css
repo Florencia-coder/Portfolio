@@ -1,0 +1,39 @@
+.container {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.rowContainer {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  border-left: 3px solid var(--color-grey);
+  padding-left: 10px;
+}
+
+.label {
+  font-size: 1.4rem;
+  color: var(--color-grey);
+}
+
+.value {
+  font-size: 1.4rem;
+  color: var(--color-grey);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px 0;
+  }
+  .rowContainer {
+    width: 70%;
+  }
+  .label,
+  .value {
+    font-size: 0.9rem;
+  }
+}

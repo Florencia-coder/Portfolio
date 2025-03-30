@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 80% !important;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}

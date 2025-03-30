@@ -1,0 +1,81 @@
+.button {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 12px 36px;
+  min-width: 270px;
+  cursor: pointer;
+}
+
+.primary {
+  color: white;
+  border: 0;
+  background-image: linear-gradient(
+    45deg,
+    hsl(175deg 95% 69%) 0%,
+    hsl(180deg 82% 58%) 8%,
+    hsl(183deg 100% 45%) 17%,
+    hsl(186deg 100% 44%) 25%,
+    hsl(189deg 100% 43%) 33%,
+    hsl(192deg 100% 42%) 42%,
+    hsl(195deg 100% 40%) 50%,
+    hsl(198deg 100% 39%) 58%,
+    hsl(201deg 100% 36%) 67%,
+    hsl(204deg 100% 34%) 75%,
+    hsl(207deg 100% 31%) 83%,
+    hsl(210deg 100% 28%) 92%,
+    hsl(215deg 94% 26%) 100%
+  );
+}
+
+.secondary {
+  background: linear-gradient(
+    45deg,
+    hsl(175deg 95% 69%) 0%,
+    hsl(180deg 82% 58%) 8%,
+    hsl(183deg 100% 45%) 17%,
+    hsl(186deg 100% 44%) 25%,
+    hsl(189deg 100% 43%) 33%,
+    hsl(192deg 100% 42%) 42%,
+    hsl(195deg 100% 40%) 50%,
+    hsl(198deg 100% 39%) 58%,
+    hsl(201deg 100% 36%) 67%,
+    hsl(204deg 100% 34%) 75%,
+    hsl(207deg 100% 31%) 83%,
+    hsl(210deg 100% 28%) 92%,
+    hsl(215deg 94% 26%) 100%
+  );
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid var(--color-grey);
+  border-image: linear-gradient(
+      45deg,
+      hsl(175deg 95% 69%) 0%,
+      hsl(180deg 82% 58%) 8%,
+      hsl(183deg 100% 45%) 17%,
+      hsl(186deg 100% 44%) 25%,
+      hsl(189deg 100% 43%) 33%,
+      hsl(192deg 100% 42%) 42%,
+      hsl(195deg 100% 40%) 50%,
+      hsl(198deg 100% 39%) 58%,
+      hsl(201deg 100% 36%) 67%,
+      hsl(204deg 100% 34%) 75%,
+      hsl(207deg 100% 31%) 83%,
+      hsl(210deg 100% 28%) 92%,
+      hsl(215deg 94% 26%) 100%
+    )
+    1;
+}
+
+.buttonDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    min-width: 80px;
+  }
+}

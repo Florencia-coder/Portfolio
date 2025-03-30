@@ -1,0 +1,29 @@
+.container {
+  text-align: center;
+}
+
+.hexagonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.itemName {
+  font-size: 14px;
+}
+.infoName {
+  font-size: 10px;
+  font-weight: lighter;
+  color: var(--color-grey);
+}
+@media (max-width: 768px) {
+  .hexagonContainer {
+    gap: 5px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1440px) {
+  .hexagonContainer {
+    gap: 10px;
+  }
+}

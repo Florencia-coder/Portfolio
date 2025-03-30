@@ -1,0 +1,109 @@
+@keyframes pulseFade {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.hexagon {
+  animation: pulseFade 5s infinite ease-in-out; /* Se agranda, achica y desvanece */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  width: 160px;
+  height: 180px;
+}
+
+.hexagon:hover {
+  transform: scale(1.2); /* Crece en hover */
+  filter: drop-shadow(0px 0px 30px rgba(24, 154, 194, 0.7)); /* Glow rosa */
+  cursor: pointer;
+}
+
+/* Polígono con efecto neón */
+.hexagon polygon {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+  stroke: #1d1c2c;
+  stroke-width: 4;
+  fill: #121212; /* Fondo negro mate */
+}
+
+.hexagon:hover polygon {
+  stroke: var(--color-sky-blue); /* Rosa brillante en hover */
+  animation: scanEffect 1.5s linear infinite alternate;
+}
+
+@keyframes scanEffect {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* Efecto en los íconos dentro del hexágono */
+.hexagon:hover .item-icon {
+  fill: var(--color-sky-blue);
+}
+
+.hexagon:hover .icon-rn {
+  stroke: var(--color-sky-blue);
+  fill: black;
+}
+
+/* Efecto en el texto dentro del hexágono */
+.hexagon:hover .item-name {
+  color: var(--color-sky-blue);
+}
+
+/* Contenedor interno */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #a8a8a8; /* Gris elegante */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  @keyframes scanEffectMovil {
+    0% {
+      filter: brightness(0.9);
+    }
+    50% {
+      filter: brightness(1);
+    }
+    100% {
+      filter: brightness(0.9);
+    }
+  }
+  .hexagon {
+    width: 60px;
+    height: 80px;
+  }
+  .hexagon:hover polygon {
+    animation: scanEffectMovil 1.5s linear infinite alternate;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .hexagon {
+    width: 80px;
+    height: 120px;
+  }
+}
