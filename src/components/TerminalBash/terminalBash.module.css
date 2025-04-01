@@ -1,0 +1,124 @@
+.container {
+  outline: 1px solid #1f2937;
+  background-color: #0e1217c2;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.container:focus {
+  outline: none;
+}
+
+.header {
+  width: 100%;
+  background-color: #1f2937;
+  border-radius: 6px 6px 0px 0;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  gap: 5px;
+  padding-left: 10px;
+}
+.containerText {
+  padding: 10px;
+}
+
+.description,
+.name,
+.icon {
+  font-family: "Consolas", Courier, monospace;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.name {
+  color: #22c55e;
+  padding-right: 5px;
+}
+.icon {
+  color: #df1a90;
+}
+
+.icon1 {
+  color: #ef4444;
+  font-size: 16px;
+}
+
+.icon2 {
+  color: #eab308;
+  font-size: 16px;
+}
+
+.icon3 {
+  color: #22c55e;
+  font-size: 16px;
+}
+.detailName {
+  display: flex;
+}
+.description {
+  text-align: justify;
+  font-weight: 100;
+}
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #fff;
+  animation: blink 1.2s step-end infinite;
+  margin-left: 2px;
+  margin-top: -4px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+  .header {
+    height: 15px;
+  }
+  .icon1,
+  .icon2,
+  .icon3 {
+    font-size: 10px;
+  }
+  .description,
+  .name,
+  .icon {
+    font-size: 1rem;
+  }
+  .containerText {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 8px;
+  }
+  .header {
+    height: 20px;
+  }
+  .icon1,
+  .icon2,
+  .icon3 {
+    font-size: 12px;
+  }
+  .description,
+  .name,
+  .icon {
+    font-size: 1.2rem;
+  }
+  .containerText {
+    padding: 8px;
+  }
+}

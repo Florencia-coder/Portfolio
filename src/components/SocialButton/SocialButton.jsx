@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SocialButton.module.css";
+import styles from "./socialButton.module.css";
 
 const SocialButton = ({ href, icon: Icon, size }) => (
   <a

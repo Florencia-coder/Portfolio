@@ -16,13 +16,13 @@
 .hexagon {
   animation: pulseFade 5s infinite ease-in-out; /* Se agranda, achica y desvanece */
   transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0px 0px 30px rgba(9, 66, 109, 0.7)); /* Glow rosa */
   width: 160px;
   height: 180px;
 }
 
 .hexagon:hover {
   transform: scale(1.2); /* Crece en hover */
-  filter: drop-shadow(0px 0px 30px rgba(24, 154, 194, 0.7)); /* Glow rosa */
   cursor: pointer;
 }
 

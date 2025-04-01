@@ -32,40 +32,118 @@ export const technologies = [
       {
         name: "TypeScript",
         logo: BiLogoTypescript,
-        description: `Descubrí verdaderamente TypeScript en mi primer trabajo como desarrolladora web. 
-Aunque lo había visto antes, no me había detenido a explorarlo en profundidad. 
-Hoy en día, es una de mis tecnologías favoritas, y su capacidad para mejorar la escalabilidad y mantenibilidad del código es inigualable.`,
+        descriptionId: "tech.typescript.description",
       },
-      { name: "JavaScript", logo: DiJavascript, className: "js" },
-      { name: "ReactJS", logo: RiReactjsFill },
-      { name: "React Query", logo: SiReactquery },
-      { name: "REACT NATIVE", logo: TbBrandReactNative },
-      { name: "HTML5", logo: IoLogoHtml5 },
-      { name: "CSS", logo: IoLogoCss3 },
-      { name: "React Redux", logo: SiRedux },
+      {
+        name: "JavaScript",
+        logo: DiJavascript,
+        descriptionId: "tech.javascript.description",
+      },
+      {
+        name: "ReactJS",
+        logo: RiReactjsFill,
+        descriptionId: "tech.ReactJS.description",
+      },
+      {
+        name: "React Query",
+        logo: SiReactquery,
+        descriptionId: "tech.reactQuery.description",
+      },
+      {
+        name: "REACT NATIVE",
+        logo: TbBrandReactNative,
+        descriptionId: "tech.reactNative.description",
+      },
+      {
+        name: "HTML5",
+        logo: IoLogoHtml5,
+        descriptionId: "tech.html5.description",
+      },
+      {
+        name: "CSS",
+        logo: IoLogoCss3,
+        descriptionId: "tech.css.description",
+      },
+      {
+        name: "React Redux",
+        logo: SiRedux,
+        descriptionId: "tech.reactRedux.description",
+      },
     ],
   },
   {
     category: "BACKEND",
     items: [
-      { name: "Sequelize", logo: SiSequelize },
-      { name: "NodeJS", logo: IoLogoNodejs },
-      { name: "PostgreSQL", logo: BiLogoPostgresql },
-      { name: "Express", logo: SiExpress },
-      { name: "Python", logo: IoLogoPython },
+      {
+        name: "Sequelize",
+        logo: SiSequelize,
+        descriptionId: "tech.sequelize.description",
+      },
+      {
+        name: "NodeJS",
+        logo: IoLogoNodejs,
+        descriptionId: "tech.nodeJS.description",
+      },
+      {
+        name: "PostgreSQL",
+        logo: BiLogoPostgresql,
+        descriptionId: "tech.PostgreSQL.description",
+      },
+      {
+        name: "Express",
+        logo: SiExpress,
+        descriptionId: "tech.express.description",
+      },
+      {
+        name: "Python",
+        logo: IoLogoPython,
+        descriptionId: "tech.python.description",
+      },
     ],
   },
   {
     category: "OTROS",
     items: [
-      { name: "Linux", logo: AiOutlineLinux },
-      { name: "Jest", logo: SiJest },
-      { name: "Cypress", logo: SiCypress },
-      { name: "SCRUM", logo: DiScrum },
-      { name: "GIT", logo: FaGitAlt },
-      { name: "GitHub", logo: FaGithub },
-      { name: "Atomic Design", logo: GiAtomicSlashes },
-      { name: "Flask", logo: BiLogoFlask },
+      {
+        name: "Linux",
+        logo: AiOutlineLinux,
+        descriptionId: "tech.linux.description",
+      },
+      {
+        name: "Jest",
+        logo: SiJest,
+        descriptionId: "tech.jest.description",
+      },
+      {
+        name: "Cypress",
+        logo: SiCypress,
+        descriptionId: "tech.cypress.description",
+      },
+      {
+        name: "SCRUM",
+        logo: DiScrum,
+        descriptionId: "tech.scrum.description",
+      },
+      {
+        name: "GIT",
+        logo: FaGitAlt,
+        descriptionId: "tech.git.description",
+      },
+      {
+        name: "GitHub",
+        logo: FaGithub,
+        descriptionId: "tech.github.description",
+      },
+      {
+        name: "Atomic Design",
+        logo: GiAtomicSlashes,
+        descriptionId: "tech.atomicDesign.description",
+      },
+      {
+        name: "Flask",
+        logo: BiLogoFlask,
+        descriptionId: "tech.flask.description",
+      },
     ],
   },
 ];

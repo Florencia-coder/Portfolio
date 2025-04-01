@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./RedirectButton.module.css";
+import styles from "./redirectButton.module.css";
 
 const RedirectButton = ({ title, link, disabled, variant = "primary" }) => {
   return (

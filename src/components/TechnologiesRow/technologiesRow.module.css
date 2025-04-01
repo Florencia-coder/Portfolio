@@ -8,14 +8,11 @@
   gap: 20px;
   justify-content: center;
 }
-
-.itemName {
-  font-size: 14px;
-}
 .infoName {
   font-size: 10px;
   font-weight: lighter;
   color: var(--color-grey);
+  padding: 0px 5px;
 }
 @media (max-width: 768px) {
   .hexagonContainer {

@@ -1,0 +1,60 @@
+.container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  z-index: 10001;
+}
+
+.button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  background: var(--color-sky-blue);
+  color: #061023;
+}
+
+.active:hover {
+  background: var(--color-sky-blue);
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 4px;
+    gap: 2px;
+    bottom: 0;
+  }
+
+  .button {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 6px;
+    gap: 6px;
+  }
+  .button {
+    font-size: 10px;
+  }
+}

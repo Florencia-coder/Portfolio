@@ -1,11 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useIntl } from "react-intl";
 
 const useContactForm = (onSuccess, onError) => {
+  const intl = useIntl();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "Quiero conocerte...",
+    message: intl.formatMessage({ id: "app.contact.input.msg" }),
   });
+
+  useEffect(() => {
+    setFormData((prevData) => ({
+      ...prevData,
+      message: intl.formatMessage({ id: "app.contact.input.msg" }),
+    }));
+  }, [intl]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

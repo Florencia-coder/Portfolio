@@ -1,0 +1,30 @@
+.modal {
+  position: fixed;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.405);
+  z-index: 1000;
+  min-height: 150px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal.entering {
+  opacity: 0;
+}
+
+.modal.leaving {
+  opacity: 0;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 90vw !important; /* Ocupar el 90% del ancho en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 769px) {
+  .modal {
+    width: 500px !important; /* Ancho fijo en pantallas grandes */
+  }
+}

@@ -1,18 +1,24 @@
 import React from "react";
 import useImageSlider from "../../hooks/useImageSlider";
-import styles from "./ImageCarrousel.module.css";
+import LazyImage from "../LazyImage/LazyImage";
+import styles from "./imageCarrousel.module.css";
 
 const ImageCarrousel = ({ images }) => {
   const { currentIndex, setCurrentIndex } = useImageSlider(images);
 
   return (
     <div className={styles.container}>
-      <img src={images[currentIndex]} className={styles.mainImg} />
+      <LazyImage 
+        src={images[currentIndex]} 
+        alt={`Imagen ${currentIndex + 1}`}
+        className={styles.mainImg} 
+      />
       <div className={styles.thumbnails}>
         {images.map((img, index) => (
-          <img
+          <LazyImage
             key={index}
             src={img}
+            alt={`Miniatura ${index + 1}`}
             className={`${styles.thumbnail} ${
               index === currentIndex && styles.active
             }`}

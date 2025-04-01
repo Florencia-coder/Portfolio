@@ -79,3 +79,11 @@
     min-width: 80px;
   }
 }
+
+@media (max-width: 1024px) {
+  .button {
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    min-width: 80px;
+  }
+}

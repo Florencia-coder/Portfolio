@@ -1,31 +1,29 @@
 import React from "react";
+import { useIntl, FormattedMessage } from "react-intl";
 import useMouseMovement from "../../hooks/useMouseMovement";
 import AboutText from "../AboutText/AboutText";
-import styles from "./About.module.css";
+import styles from "./about.module.css";
+import TitleMovement from "../TitleMovement/TitleMovement";
 
 const About = () => {
   const { handleMouseMove, offsetX, offsetY } = useMouseMovement();
+  const intl = useIntl();
+  const title = intl.formatMessage({ id: "app.about.title" });
   return (
     <div className={styles.container} onMouseMove={handleMouseMove}>
-      <div className={styles.left}>
-        <div
-          className={styles.containerTitle}
-          style={{ transform: `translate(${offsetX}px, ${offsetY}px)` }}
-        >
-          <span className={styles.title}>
-            DESARROLLADORA<h1 className={styles.titleRol}>FULLSTACK</h1>
-          </span>
-
-          <h1 className={styles.title}>FRONTEND</h1>
-        </div>
+      <article className={styles.left}>
+        <TitleMovement
+          offsetX={offsetX}
+          offsetY={offsetY}
+          title={title}
+          bottomTitle="FRONTEND"
+        />
         <AboutText />
-        <p
-          className={styles.typingEffect}
-        >{`<> Solucionando la vida de manera digital. </>`}</p>
-      </div>
-      <div className={styles.rigth}>
-        <img className={styles.img} src="/ilustracion.jpg" alt="Ilustración" />
-      </div>
+        <p className={styles.typingEffect}>
+          {<FormattedMessage id="app.about.typingText" />}
+        </p>
+      </article>
+      <article className={styles.rigth} />
     </div>
   );
 };

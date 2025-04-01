@@ -9,6 +9,9 @@
   padding: 20px 40px;
   border-left: 1px solid aqua;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
 }
 
 .title {
@@ -39,7 +42,7 @@
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .section {
@@ -52,6 +55,26 @@
   .description {
     padding: 0;
     font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .buttonContainer {
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .description {
+    padding: 0;
+    font-size: 0.8rem;
     font-weight: 300;
   }
 

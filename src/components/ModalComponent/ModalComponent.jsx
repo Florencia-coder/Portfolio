@@ -1,18 +1,17 @@
 import Modal from "react-modal";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import styles from "./ModalComponent.module.css"; // Importamos el archivo CSS module
+import styles from "./modalComponent.module.css"; // Importamos el archivo CSS module
 
 Modal.setAppElement("#root");
 
 const ModalComponent = ({
   isOpen,
-  setIsOpen,
+  onClose,
   children,
   width = "500px",
   height = "300px",
   shouldCloseOnOverlayClick = true,
 }) => {
-  const onClose = () => setIsOpen(false);
   return (
     <Modal
       isOpen={isOpen}
@@ -20,6 +19,7 @@ const ModalComponent = ({
       onRequestClose={onClose}
       overlayClassName={styles.modalOverlay}
       className={styles.modalWrapper}
+      shouldFocusAfterRender={false}
     >
       <div className={styles.modalContent} style={{ width, height }}>
         <button
@@ -27,7 +27,7 @@ const ModalComponent = ({
           onClick={onClose}
           className={styles.closeModalBtn}
         >
-          <MdOutlineKeyboardArrowDown size="30px" />
+          <MdOutlineKeyboardArrowDown className={styles.icon} size="30px" />
         </button>
         {children}
       </div>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { FormattedMessage } from "react-intl";
 import ModalComponent from "../ModalComponent/ModalComponent";
 import ProjectInfo from "../ProjectInfo/ProjectInfo";
-import styles from "./ProjectCard.module.css";
+import LazyImage from "../LazyImage/LazyImage";
+import styles from "./projectCard.module.css";
 
 const ProjectCard = ({ project }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,18 +15,30 @@ const ProjectCard = ({ project }) => {
         project.isWorkExperience && styles.containerWork
       }`}
     >
-      <img className={styles.img} src={project.images[0]} alt={project.title} />
+      <LazyImage
+        src={project.images[0]}
+        alt={project.titleId}
+        className={`${styles.img} ${
+          project.isWorkExperience && styles.imgWork
+        }`}
+      />
       <div className={styles.content}>
         <div className={styles.containerTitle}>
-          <h1 className={styles.title}>{project.title}</h1>
+          <h1 className={styles.title}>
+            <FormattedMessage id={project.titleId} />
+          </h1>
           <p className={styles.type}>
             {project.startDate} - {project.finalDate}
           </p>
         </div>
-        <p className={styles.type}>ROL: {project.typeOfProject}</p>
         <p className={styles.type}>
-          Categoria :
-          <span className={styles.category}> {project.category}</span>
+          <FormattedMessage id="app.projects.role" /> {project.typeOfProject}
+        </p>
+        <p className={`${styles.type} ${styles.categoryType}`}>
+          <FormattedMessage id="app.projects.category" />{" "}
+          <span className={styles.category}>
+            <FormattedMessage id={project.categoryId} />
+          </span>
         </p>
       </div>
       <div
@@ -36,7 +50,7 @@ const ProjectCard = ({ project }) => {
       </div>
       <ModalComponent
         isOpen={isOpen}
-        setIsOpen={setIsOpen}
+        onClose={() => setIsOpen(false)}
         width="90vw"
         height="80vh"
       >

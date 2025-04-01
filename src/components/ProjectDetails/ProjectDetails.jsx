@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./ProjectDetails.module.css";
+import { useIntl } from "react-intl";
+import styles from "./projectDetails.module.css";
 
 const ProjectDetails = ({
   category,
@@ -8,11 +9,24 @@ const ProjectDetails = ({
   typeOfProject,
   isResponsive,
 }) => {
+  const intl = useIntl();
   const details = [
-    { label: "Categoria:", value: category },
-    { label: "Tiempo dedicado:", value: `${startDate} - ${finalDate}` },
-    { label: "Rol asignado:", value: typeOfProject },
-    { label: "Proyecto responsivo:", value: isResponsive ? "Si" : "No" },
+    {
+      label: intl.formatMessage({ id: "app.projects.category" }),
+      value: category,
+    },
+    {
+      label: intl.formatMessage({ id: "app.projects.time.spend" }),
+      value: `${startDate} - ${finalDate}`,
+    },
+    {
+      label: intl.formatMessage({ id: "app.projects.rol.assigned" }),
+      value: typeOfProject,
+    },
+    {
+      label: intl.formatMessage({ id: "app.projects.title.responsive" }),
+      value: isResponsive,
+    },
   ];
 
   return (

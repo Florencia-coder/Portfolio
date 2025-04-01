@@ -1,29 +1,38 @@
-import RedirectButton from "../Button/RedirectButton";
+import { FormattedMessage, useIntl } from "react-intl";
+import RedirectButton from "../../atoms/Button/RedirectButton";
 import ImageCarrousel from "../ImageCarrousel/ImageCarrousel";
 import ProjectDetails from "../ProjectDetails/ProjectDetails";
 import TechSlider from "../TechSlider/TechSlider";
-import styles from "./ProjectInfo.module.css";
+import styles from "./projectInfo.module.css";
 
 const ProjectInfo = ({ project }) => {
+  const intl = useIntl();
   const {
     images,
-    title,
-    description,
-    category,
+    titleId,
+    descriptionId,
+    categoryId,
     technologies,
     typeOfProject,
     startDate,
     finalDate,
-    isResponsive,
+    isResponsiveId,
     link,
     repositoryLink,
   } = project;
+
+  const title = intl.formatMessage({ id: titleId });
+  const category = intl.formatMessage({ id: categoryId });
+  const projectTitle = intl.formatMessage({ id: "app.projects.title" });
+  const isResponsive = intl.formatMessage({ id: isResponsiveId });
 
   return (
     <div className={styles.container}>
       <ImageCarrousel images={images} />
       <div className={styles.section}>
-        <h2 className={styles.title}>Proyecto {title}</h2>
+        <h2 className={styles.title}>
+          {projectTitle} {title}
+        </h2>
         <TechSlider technologies={technologies} />
         <ProjectDetails
           category={category}
@@ -32,15 +41,17 @@ const ProjectInfo = ({ project }) => {
           finalDate={finalDate}
           isResponsive={isResponsive}
         />
-        <p className={styles.description}>{description}</p>
+        <p className={styles.description}>
+          <FormattedMessage id={descriptionId} />
+        </p>
         <div className={styles.buttonContainer}>
           <RedirectButton
-            title="IR AL PROYECTO"
+            title={<FormattedMessage id="app.projects.viewProject" />}
             disabled={!Boolean(link)}
             link={link}
           />
           <RedirectButton
-            title="IR AL REPOSITORIO"
+            title={<FormattedMessage id="app.projects.viewRepo" />}
             link={repositoryLink}
             disabled={!Boolean(repositoryLink)}
             variant="secondary"

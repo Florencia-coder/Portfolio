@@ -15,6 +15,7 @@
 
 .thumbnails {
   display: flex;
+  flex-wrap: wrap;
   overflow-x: auto;
   justify-content: center;
   gap: 10px;

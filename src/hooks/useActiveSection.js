@@ -1,11 +1,15 @@
-// src/hooks/useActiveSection.js
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-const useActiveSection = (sections, threshold = 0.5) => {
+const useActiveSection = (threshold = 0.5) => {
   const [activeSection, setActiveSection] = useState("");
+  const observerRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const sections = Array.from(document.querySelectorAll("section"));
+
+    if (!sections.length) return;
+
+    observerRef.current = new IntersectionObserver(
       (entries) => {
         const visibleSection = entries.find((entry) => entry.isIntersecting);
         if (visibleSection) setActiveSection(visibleSection.target.id);
@@ -13,10 +17,14 @@ const useActiveSection = (sections, threshold = 0.5) => {
       { threshold }
     );
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => observerRef.current.observe(section));
 
-    return () => observer.disconnect();
-  }, [sections, threshold]);
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [threshold]);
 
   return activeSection;
 };

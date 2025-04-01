@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import useResponsiveScroll from "../../hooks/useResponsiveScroll";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { ProjectsData } from "./ProjectsData";
-import styles from "./TrajectorySection.module.css";
+import styles from "./trajectorySection.module.css";
 
 const ProjectsSection = () => {
   const scrollContainer = useRef(null);

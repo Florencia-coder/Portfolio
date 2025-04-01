@@ -36,6 +36,7 @@
   opacity: 0;
   animation: fadeIn 0.5s ease-out forwards;
   z-index: 10001;
+  border: none !important;
 }
 
 .modalContent {
@@ -56,9 +57,11 @@
 }
 
 .closeModalBtn {
-  fill: var(--color-sky-blue);
   cursor: pointer;
   align-self: flex-end;
+}
+.icon {
+  fill: var(--color-sky-blue);
 }
 
 @media (max-width: 480px) {

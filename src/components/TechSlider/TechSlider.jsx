@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TechSlider.module.css";
+import styles from "./techSlider.module.css";
 
 const TechSlider = ({ technologies }) => {
   return (
