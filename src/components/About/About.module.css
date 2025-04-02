@@ -68,9 +68,11 @@
     background-size: cover;
     background-position: center;
   }
+
   .rigth {
     display: none;
   }
+
   .typingEffect {
     font-size: 0.8rem;
   }
