@@ -63,7 +63,7 @@
 
 @media (max-width: 480px) {
   .container {
-    background: url("ilustracion.jpg");
+    background: url("/ilustracion.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
