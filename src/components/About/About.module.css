@@ -16,7 +16,7 @@
 }
 
 .rigth {
-  background-image: url("ilustracion.jpg");
+  background-image: url("/portfolio/ilustracion.jpg");
   background-size: cover;
   background-position: center;
 }
