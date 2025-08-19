@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://florencia-coder.github.io/portfolio/",
+  "homepage": "https://florencia-coder.github.io/Portfolio/",
   "dependencies": {
     "gsap": "^3.12.7",
     "react": "^19.0.0",
