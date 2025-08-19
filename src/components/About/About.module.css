@@ -3,10 +3,12 @@
   height: 100%;
   width: 100%;
 }
+
 .left,
 .rigth {
   flex: 1;
 }
+
 .left {
   display: flex;
   flex-direction: column;
@@ -16,7 +18,7 @@
 }
 
 .rigth {
-  background-image: url("/portfolio/ilustracion.jpg");
+  background-image: url("/Portfolio/ilustracion.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -31,27 +33,37 @@
 .typingEffect {
   margin-top: 4%;
   font-size: 1.2rem;
-  font-family: "Courier New", Courier, monospace; /* Fuente tipo máquina de escribir */
-  white-space: nowrap; /* Para evitar que se rompa la línea */
-  overflow: hidden; /* Oculta el texto mientras se escribe */
-  border-right: 0.1em solid var(--color-red); /* Cursor de la máquina de escribir */
-  display: inline-block; /* Hace que no se expanda el contenedor */
+  font-family: "Courier New", Courier, monospace;
+  /* Fuente tipo máquina de escribir */
+  white-space: nowrap;
+  /* Para evitar que se rompa la línea */
+  overflow: hidden;
+  /* Oculta el texto mientras se escribe */
+  border-right: 0.1em solid var(--color-red);
+  /* Cursor de la máquina de escribir */
+  display: inline-block;
+  /* Hace que no se expanda el contenedor */
   animation: typing 8s steps(60) 1s forwards,
-    blink-caret 0.75s step-end infinite; /* Ajustado para hacer que se vea lento */
+    blink-caret 0.75s step-end infinite;
+  /* Ajustado para hacer que se vea lento */
 }
 
 @keyframes typing {
   from {
-    width: 0; /* Comienza con el texto oculto */
+    width: 0;
+    /* Comienza con el texto oculto */
   }
+
   to {
-    width: 33ch; /* Se expande al 100% de su contenido */
+    width: 33ch;
+    /* Se expande al 100% de su contenido */
   }
 }
 
 @keyframes blink-caret {
   50% {
-    border-color: transparent; /* Hace que el cursor parpadee */
+    border-color: transparent;
+    /* Hace que el cursor parpadee */
   }
 }
 
@@ -85,6 +97,7 @@
     background-size: cover;
     background-position: center;
   }
+
   .rigth {
     display: none;
   }
