@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header/Header";
 import "./App.css";
 import About from "./components/About/About";
+import Home from "./components/Home/Home";
 import TecnologiesSection from "./components/TecnologiesSection/TecnologiesSection";
 import ContactSection from "./components/ContactSection/ContactSection";
 import ProjectsSection from "./components/ProjectsSection/TrajectorySection";
@@ -13,11 +14,13 @@ const App = () => {
     <LanguageProvider>
       <div className="App">
         <Header />
-        <LanguageSwitcher />
+        <section id="home">
+          <Home />
+        </section>
         <section id="about">
           <About />
         </section>
-        <section id="trajectory">
+        {/* <section id="trajectory">
           <ProjectsSection />
         </section>
         <section id="technologies">
@@ -25,7 +28,7 @@ const App = () => {
         </section>
         <section id="contact">
           <ContactSection />
-        </section>
+        </section> */}
       </div>
     </LanguageProvider>
   );

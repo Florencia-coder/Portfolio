@@ -1,14 +1,15 @@
 export default {
   // Seccion Header
+  "app.nav.home": "Inicio",
   "app.nav.about": "Sobre mí",
   "app.nav.trajectory": "Trayectoria",
   "app.nav.technologies": "Tecnologías",
   "app.nav.contact": "Contacto",
 
   // Sección About
-  "app.about.title": "DESARROLLADORA FULLSTACK",
-  "app.about.subtitle": "Mi camino dev ♡",
-  "app.about.description": `Hola, mi nombre es Florencia. Soy Desarrolladora FullStack con más de 4
+  "app.about.title": "DESARROLLADORA FRONTEND",
+  "app.about.subtitle": "Mi camino dev:",
+  "app.about.description": `Hola, mi nombre es Florencia. Soy Desarrolladora Frontend con más de 4
         años de experiencia, tanto en relación de dependencia como freelance. Mi
         formación en Ingeniería en Sistemas me llevó a descubrir mi pasión por
         la programación. Mi objetivo es generar un impacto duradero,

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./titleMovement.module.css";
 
-const TitleMovement = ({ offsetX, offsetY, title, bottomTitle = "" }) => {
+const TitleMovement = ({ offsetX, offsetY, title }) => {
   const titleArray = title.split(" ");
   const firstWord = titleArray[0];
   const secondWord = titleArray[1];
@@ -22,7 +22,6 @@ const TitleMovement = ({ offsetX, offsetY, title, bottomTitle = "" }) => {
         )}
       </span>
 
-      <h1 className={styles.title}>{bottomTitle}</h1>
     </div>
   );
 };

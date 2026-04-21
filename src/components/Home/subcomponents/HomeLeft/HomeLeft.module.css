@@ -1,0 +1,64 @@
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #ff4d4d;
+    opacity: 0.5;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #f1f1f1;
+    font-family: "Space Grotesk", sans-serif;
+    /* ✅ más limpio y moderno */
+    line-height: 1.1;
+    margin: 0;
+}
+
+.rol {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #E63946;
+    font-family: "Audiowide", sans-serif;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.button {
+    background-color: #E63946;
+    border: none;
+    margin-top: 15px;
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.7);
+    transform: translateY(-2px);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

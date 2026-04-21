@@ -16,9 +16,11 @@
   --color-flourecent-cyan: #63fbef;
   --color-emerald: #00df81;
 }
+
 html {
   font-size: 62.5% !important;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -27,13 +29,21 @@ html {
 }
 
 body {
-  background: black;
-  transform: scale(1);
+  background: rgb(0, 0, 0);
   width: 100%;
+
 }
+
 html,
 body {
   overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 li {

@@ -3,6 +3,7 @@ import styles from "./navBar.module.css";
 import { FormattedMessage } from "react-intl";
 
 const SECTIONS = [
+  { id: "home", label: <FormattedMessage id={`app.nav.home`} /> },
   { id: "about", label: <FormattedMessage id={`app.nav.about`} /> },
   { id: "trajectory", label: <FormattedMessage id={`app.nav.trajectory`} /> },
   {
@@ -24,7 +25,6 @@ const NavBar = ({ activeSection }) => {
             >
               {label}
             </a>
-            {id !== "contact" && <div className={styles.separator}></div>}
           </li>
         ))}
       </ul>

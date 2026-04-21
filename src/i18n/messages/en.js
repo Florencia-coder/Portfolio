@@ -6,9 +6,9 @@ export default {
   "app.nav.contact": "Contact",
 
   // About Section
-  "app.about.title": "FULLSTACK DEVELOPER",
-  "app.about.subtitle": "My dev path ♡",
-  "app.about.description": `Hi, my name is Florencia. I'm a Full Stack Developer with over 4
+  "app.about.title": "FRONTEND DEVELOPER",
+  "app.about.subtitle": "My dev path:",
+  "app.about.description": `Hi, my name is Florencia. I'm a Frontend Developer with over 4
 years of experience, both as a freelancer and as an employee. My
 training in Systems Engineering led me to discover my passion for programming. My goal is to make a lasting impact,
 excelling in what I'm most passionate about: web development.`,

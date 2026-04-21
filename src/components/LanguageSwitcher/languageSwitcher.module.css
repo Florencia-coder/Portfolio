@@ -5,7 +5,7 @@
   gap: 8px;
   padding: 8px;
   border-radius: 8px;
-  z-index: 10001;
+  /* z-index: 10001; */
 }
 
 .button {
@@ -54,6 +54,7 @@
     padding: 6px;
     gap: 6px;
   }
+
   .button {
     font-size: 10px;
   }
